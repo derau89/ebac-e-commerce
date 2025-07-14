@@ -1,0 +1,30 @@
+
+body .selector {
+  height: 1rem;
+}
+
+button {
+        @extend %button;
+    }
+    
+    button:hover {
+        background: $blue2;
+    }
+    
+
+    form {
+    display: grid;
+    justify-items: start;
+    font-size: 20px;
+
+    div {
+        margin-bottom: 15px;
+    }
+}
+
+@include phones {
+    form {
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
+}

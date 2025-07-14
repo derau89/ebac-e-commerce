@@ -1,0 +1,62 @@
+$colorblue: #091E3F;
+$fontfamily:  "Open Sans", sans-serif;
+$blue2: #57c8dc;
+$white: #ffffff;
+$font-size: 0.875rem;
+$h2: 2rem;
+$h3: 1.75rem;
+$fontweight: 400;
+$letterspacing: 0.2px; 
+
+
+
+@mixin flexbox{
+    display: flex;
+}
+
+@mixin display-center {
+    justify-content: center;
+}
+
+@mixin align-items-center {
+    align-items: center;
+}
+
+@mixin flexbox-column {
+    display: flex;
+    flex-direction: column;
+
+}
+
+@mixin flexbox-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin margin-auto {
+    margin: auto;
+}
+
+@mixin phones{
+    @media screen and (max-width: 721px) {@content};
+}
+
+%link {
+    text-decoration: none;
+    font-size: $font-size;
+    letter-spacing: $letterspacing;
+    font-weight: $fontweight;
+}
+
+%button {
+    border: none;
+    background-color: $colorblue;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+    padding: 6px 50px;
+    cursor: pointer;
+    justify-content: center;
+    color:$white;
+
+}

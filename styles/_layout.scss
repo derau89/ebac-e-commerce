@@ -1,0 +1,414 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 20px;
+  margin: 0;
+  letter-spacing: 0.2px;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+header {
+    padding: 0 15px;
+
+    a {
+        @extend %link;
+        color: $white;
+    }
+
+    
+
+    .img {
+        max-width: 237px;
+        @include flexbox;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    
+    
+    nav {
+        display: contents;
+    }
+}
+
+.header__top{
+    @include flexbox-row;
+    justify-content: space-between;
+    @include align-items-center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 1099px;
+}
+
+.header__cell-and-lang {
+    @include flexbox;
+    display: contents;
+}
+
+
+
+.header__cell {
+    padding: 1px;
+    gap: 66px;
+    @include align-items-center;
+    font-size: $font-size;
+    letter-spacing: $letterspacing;
+    font-weight: 100;
+    @include flexbox;
+}
+
+.header__number {
+    color: $blue2;
+    letter-spacing: $letterspacing;
+    font-weight: $fontweight;
+    flex: none;
+}
+
+.header__country {
+    font-size: $font-size;
+    line-height: 22px;
+    letter-spacing: $letterspacing;
+    font-weight: 700;
+    @include flexbox;
+}
+
+
+
+.header__links-busqueda {
+    background-color: $colorblue;
+    width: 80%;
+    padding: 15px 25px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    @include flexbox;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    font-size: $font-size;
+    letter-spacing: $letterspacing;
+    line-height: 18px;
+    max-width: 1099px;
+
+
+    .hamburguer {
+        display: none; 
+    }
+}
+
+.idioma-actual {
+    @include flexbox;
+    color: $blue2;
+}
+
+
+/* Header Style */
+
+main {
+    .main__banner {
+        background-image: url("https://piernext.portdebarcelona.cat/wp-content/uploads/2024/09/AI-Ports-1024x683.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        padding: 150px 0;
+        background-position-y: 50%;
+        text-align: center;
+        color: $white;
+
+        h2 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 35px;
+        }
+    }
+ 
+    
+    .main__tracking {
+        @include flexbox-column;
+        @include align-items-center;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 100px;
+        padding-top: 100px;
+
+        h2 {
+            font-size: $h2;
+            line-height: 1.2;
+            padding: 6px 50px;
+        }
+    }
+    
+     
+    
+    
+}
+
+
+
+
+
+
+        li {
+            @include flexbox;
+            text-align: left;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: $h2;
+        }
+
+        .main-body {
+            font-size: 20px;
+            letter-spacing:$letterspacing;
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            @include margin-auto;
+            width: 70%;
+            align-items: start;
+            justify-items: center;
+            gap: 67px;
+            padding-top: 100px;
+        }
+    
+
+/* Footer Style */
+
+footer {
+    background-color: $colorblue;
+
+    p {
+        max-width: 400px;
+        letter-spacing:$letterspacing;
+        line-height: 20px;
+        color:$white;
+    }
+
+    li {
+        @include flexbox;
+        @include align-items-center;
+        justify-content: flex-start;
+        margin-bottom: 8px;
+    }
+
+    h3 {
+        font-size: $h3;
+        font-weight: 500;
+        color:$white;
+    }
+
+    
+    
+    .about {
+        @include flexbox-column;
+        width: 50%;
+        max-width: 500px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+   
+    
+    .social {
+        @include flexbox;
+    }
+    
+    .footer__link {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-bottom: 10px;
+
+        p, a {
+            @extend %link;
+            color:$white;
+            padding-left: 5px;
+        }
+    }
+
+    .footer__cs {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+        @include flexbox-column;
+        align-content: flex-end;
+        @include align-items-center;
+        align-items: flex-start;
+
+        p {
+            margin: 0;
+        }
+
+       
+        p, a {
+            @extend %link;
+            color:$white;
+            padding-left: 5px;
+    }
+
+    img {
+        padding-right: 5px;
+    }
+
+    }
+    
+     
+    
+}
+
+ul {
+    padding-left: 0;
+}
+
+.footer__end {
+    @include flexbox-row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 50px;
+}
+
+.footer__hound {
+    @include flexbox-column;
+    padding-top: 70px;
+}
+
+.copyright {
+    background-color:$blue2;
+    padding: 16px 0px;
+
+    a {
+        text-decoration: none;
+        font-size: $font-size;
+        font-weight: bold;
+        line-height: 22px;
+        letter-spacing: $letterspacing;
+        color: $white;
+    }
+
+    div {
+        @include flexbox;
+        justify-content: center;
+        @include margin-auto;
+        max-width: 60%;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+
+@include phones {
+    header {
+        padding: 0;
+    }
+
+    .header__links-busqueda {
+        width: 100%;
+        padding: 20px 25px;
+        display: flex;
+        justify-content: flex-start;
+
+        .hamburguer {
+            display: flex;
+            background-color: #091E3F;
+            border: none;
+        }
+    }
+
+    .header__top {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+@include phones{
+    .top {
+        @include flexbox-column;
+        flex-wrap: wrap;
+        
+    
+}
+
+.banner h2 {
+    font-size: 40px;
+    @include margin-auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.banner h3 {
+    font-size: 20px;
+    @include margin-auto;
+    padding-bottom: 30px;
+}
+
+}
+
+@include phones {
+    .footer__end {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 14px;
+        padding: 10px;
+        gap: 0;
+    }
+}
+
+@include phones {
+    .links-busqueda {
+        @include flexbox-row;
+        gap: 5px;
+        justify-content: space-evenly;
+        @include margin-auto;
+        width: 100%;
+        flex-wrap: nowrap;
+        @include align-items-center;
+    }
+
+    nav a {
+        display: none;
+    }
+}
+
+@include phones {
+    .cell {
+        @include flexbox-row;
+    }
+}
+
+@include phones {
+    a {
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+@include phones {
+    .main__tracking {
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
+}
+
+@include phones {
+    li{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+

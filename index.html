@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>ecommerce sass</title>
+</head>
+<body>
+    <header>
+        
+        
+
+        <section class="header__top">
+            <div>
+                <a href="https://www.hound-express.com/">
+                    <i><img src="img/logo-Hound_Express-bg-white.png" alt="logo principal" class="img"></i>
+                </a>    
+                
+            </div>
+
+            <article class="header__cell-and-lang">  
+                <div class="header__cell">
+                    <span class="header__country">MX <a href="https://www.hound-express.com/" class="header__number">+52(55) 4000 1920</a></span>
+                    
+                
+                    <span class="header__country">USA <a href="https://www.hound-express.com/ " class="header__number">+1(95) 6568 3443</a></span>
+                
+                </div>
+
+                <div>
+                    <a class="idioma-actual">
+                        Idioma<img src="https://img.icons8.com/?size=48&id=85502&format=png" alt="Español" class="selector"> 
+                    </a>
+                </div>
+            </article> 
+        </section>    
+
+        <section class="header__links-busqueda">
+
+        
+
+            <nav>
+            <a href="https://www.hound-express.com/index.html">Inicio</a>
+            <a href="#registro de guias">Registro de Guías</a>
+            <a href="#estado general">Estado General</a>
+            <a href="#lista de guias">Lista de Guías</a>
+            <a href="">Buscar Guías</a>
+            <a href="">Historial de Guías</a>
+            </nav>
+
+            <button class="hamburguer">
+            <img  src="img/burger_icon.svg" alt="">
+        </button>
+            
+        </section> 
+        
+        
+
+    </header>
+
+    <main>
+
+         <section class="main__banner">
+            <h3>¡Nos esmeramos por que llegue a su destino!</h3>
+            <h2>Rastreo de paquetes</h2>
+        </section> 
+
+        <section class="main-body">    
+                <form action="">
+                
+                    <h2 id="registro de guias">Registro de Guías</h2>
+                    <div>
+                        <label for="número de guía">Número de guía</label>
+                        <input type="text" pattern="\d*" title="solo números" required>
+                    </div>
+                        
+                    <div>
+                        <label for="origen">Origen</label>
+                        <input type="text" id="origen"  name="origen" required>
+                    </div>
+
+                    <div>
+                        <label for="destino">Destino</label>
+                        <input type="text" id="destino"  name="destino" required>
+                    </div>
+
+                    <div>
+                        <label for="destinatario">Destinatario</label>
+                        <input type="text" id="destinatario"  name="destinatario" required> 
+                    </div>
+
+                    <div>
+                        <label for="date">Fecha de creación</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+
+                    <div>
+                        <label for="status">Estado inicial</label>
+                        <select id="status" name="status" required>
+                            <option value disabled selected>--Seleccione un estado--</option>
+                            <option value="pending">Pendiente</option>
+                            <option value="transit">En tránsito,</option>
+                            <option value="delivered">Entregado</option>
+                        </select>    
+                    </div>
+
+                    <div>
+                        <button type="submit">Enviar</button>
+                    </div>
+                
+                </form>
+            
+
+            <section>
+                <h2 id="estado general">Estado general</h2>
+                <ul>
+                    <li><strong>Número total de guías activas:</strong> 0</li>
+                    <li><strong>Guías en tránsito:</strong> 0</li>
+                    <li><strong>Guías entregadas:</strong> 0</li>
+                </ul>
+            </section>
+    </section>
+
+    <section class="main__tracking">
+        <h2 id="lista de guias">Lista de guías</h2>
+        <table border="5" cellpadding="10">
+            <thead bgcolor="#57c8dc">
+                <tr>
+                    <th>Número de guía</th>
+                    <th>Estado actual</th>
+                    <th>Origen</th> 
+                    <th>Destino</th>
+                    <th>Fecha de la última actualización</th>
+                </tr>
+            </thead>
+
+            <tbody align="left">
+                <tr>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                </tr>
+
+                <tr>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                </tr>
+
+                <tr>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                </tr>
+
+                <tr>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                </tr>
+
+                <tr>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit">Actualizar Información</button>
+    </section>
+    </main>
+
+
+
+
+
+
+    <footer>
+        <div class="footer__end">
+    
+            <section class="footer__hound">  
+                <div>
+                <a href="https://www.hound-express.com/">
+                    <img src="img/logoAzulBlancoHE.png" alt="" style="width: 252px;height: 68px;margin-left: -30px;">
+                </a>  
+                </div>
+
+               
+
+                <div class="footer__social">
+                    <a target="blank" href="https://www.linkedin.com/company/hound-express/"><img src="https://img.icons8.com/?size=96&id=vWcULbkKy3DN&format=png" alt="Linkedin" width="20px"></a>
+
+                    <a target="blank" href="https://www.facebook.com/houndexpress?mibextid=kFxxJD"><img src="https://img.icons8.com/?size=96&id=uQMLhu5kpbUZ&format=png" alt="Facebook" width="20px"></a>
+
+                    <a target="blank" href="https://www.instagram.com/hound.express?igsh=OGQ5ZDc2ODk2ZA=="><img src="https://img.icons8.com/?size=128&id=43625&format=png" alt="Instagram" width="20px"></a>
+
+                </div>
+
+                <div class="footer__idioma-selector">
+                    
+                    <a class="idioma-actual">
+                        Idioma<img src="https://img.icons8.com/?size=48&id=85502&format=png" alt="Español" class="selector"> 
+                    </a>
+                
+            </div>
+
+                <div>
+                    <p> 
+                        "Somos un equipo de expertos en logística, tecnología y comercio internacional. 
+                    Te queremos ayudar a llevar tu empresa al siguiente nivel con soluciones de importación, 
+                    exportación y logística nacional e internacional."
+                    </p>
+                </div>
+            </section>  
+
+            <section>
+                <div class="footer__link">
+                    <h3>
+                        <b style="color: #57c8dc;">Somos</b>
+                        <b> <br> Hound Express</b>
+                    </h3>
+
+                    <div>
+                            <p>
+                                <a href="https://www.hound-express.com/index.html">Inicio</a>
+                            </p>
+                        
+                            <p>
+                                <a href="https://www.hound-express.com/nosotros.html">Nosotros</a>
+                            </p>
+                        
+                            <p>
+                                <div class="servicios-selector">
+                                    <p>Servicios <span class="flecha">▼</span> </p>   
+                                
+                                </div>  
+                                    
+                            </p>
+                        
+                            <p>
+                                <a href="https://www.hound-express.com/preguntas-frecuentes.html">Preguntas</a>
+                            </p>
+                        
+                            <p>
+                                <a href="https://www.hound-express.com/tracking.html">Rastrear paquete</a>
+                            </p>
+                       
+                            <p>
+                                <a href="https://www.hound-express.com/noticias.html">Noticias</a>
+                            </p>
+                        
+                            <p>
+                                <a href="https://www.hound-express.com/hx/blog/">Blog</a>
+                            </p>
+                        
+                            <p>
+                                <a href="https://www.hound-express.com/contactanos.html">Contacto</a>
+                            </p>
+                        </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="footer__cs">
+                    <h3>
+                        <b>Servicio al Cliente</b>
+                    </h3>
+
+                    <ul>
+                        <li>
+                            <span> <img src="https://www.hound-express.com/HE-img/iconos/Clock.svg" alt=""></span>
+                            <p>Lunes a Viernes de 09:00 a 18:00 hrs <br>Sábados de 09:00 a 13:00 hrs</p>
+                        </li>
+
+                        <li>
+                            <p>MX</p>
+                        </li>
+
+                        <li>
+                            <span> <img src="https://www.hound-express.com/HE-img/iconos/Call.svg" alt=""></span>
+                            <p>+52(55) 4000 1920</p>
+                        </li>
+
+                        <li>
+                            <span><img src="https://www.hound-express.com/HE-img/iconos/Mail.svg" alt=""></span>
+                            <a href="sclientes1@hound-express.com">sclientes1@hound-express.com</a>
+                        </li>
+
+                        <li>
+                            <p>EUA</p>
+                        </li>
+
+                        <li>
+                            <span><img src="https://www.hound-express.com/HE-img/iconos/Call.svg" alt=""></span>
+                            <p>+1(95) 6568 3443</p>
+                        </li>
+
+                        <li>
+                            <span><img src="https://www.hound-express.com/HE-img/iconos/Mail.svg" alt=""></span>
+                            <a href="cslaredo1@hound-express.com">cslaredo1@hound-express.com</a>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <section class="copyright">    
+            <div>   
+            <a>Copyright © 2025 Hound Express. Todos los derechos reservados.</a>
+            <a href="https://www.hound-express.com/privacidad.html">Política de privacidad</a>
+            <a href="https://www.hound-express.com/terminos.html">Términos y condiciones</a>
+            </div>
+        </section>    
+    </footer>
+</body>
+</html>
