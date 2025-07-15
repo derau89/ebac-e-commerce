@@ -40,6 +40,7 @@ header {
     margin-right: auto;
     width: 80%;
     max-width: 1099px;
+    margin-bottom: 10px;
 }
 
 .header__cell-and-lang {
@@ -103,7 +104,24 @@ header {
 }
 
 
-/* Header Style */
+.scrollspy-example {
+  height: 500px; 
+  overflow-y: auto;
+  background-color: black;
+}
+
+.navbar {
+    @include flexbox;
+    justify-content: space-around;
+    }
+    
+.nav-link {
+    color: #57c8dc;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #57c8dc;
+}
 
 main {
     .main__banner {
@@ -147,8 +165,13 @@ main {
     
 }
 
+table{
+    margin-bottom: 20px;
+}
 
-
+tbody, td, tfoot, th, thead, tr {
+    border-width: 2px
+}
 
 
 
@@ -156,7 +179,8 @@ main {
             @include flexbox;
             text-align: left;
             display: block;
-            margin-bottom: 15px;
+            margin-bottom: 7.5px;
+            margin-top: 7.5px;
         }
 
         h2 {
@@ -172,7 +196,7 @@ main {
             width: 70%;
             align-items: start;
             justify-items: center;
-            gap: 67px;
+            gap: 40px;
             padding-top: 100px;
         }
     

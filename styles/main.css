@@ -75,6 +75,7 @@ header nav {
   margin-right: auto;
   width: 80%;
   max-width: 1099px;
+  margin-bottom: 10px;
 }
 
 .header__cell-and-lang {
@@ -131,7 +132,25 @@ header nav {
   color: #57c8dc;
 }
 
-/* Header Style */
+.scrollspy-example {
+  height: 500px;
+  overflow-y: auto;
+  background-color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link {
+  color: #57c8dc;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #57c8dc;
+}
+
 main .main__banner {
   background-image: url("https://piernext.portdebarcelona.cat/wp-content/uploads/2024/09/AI-Ports-1024x683.jpg");
   background-repeat: no-repeat;
@@ -164,11 +183,20 @@ main .main__tracking h2 {
   padding: 6px 50px;
 }
 
+table {
+  margin-bottom: 20px;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-width: 2px;
+}
+
 li {
   display: flex;
   text-align: left;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 7.5px;
+  margin-top: 7.5px;
 }
 
 h2 {
@@ -184,7 +212,7 @@ h2 {
   width: 70%;
   align-items: start;
   justify-items: center;
-  gap: 67px;
+  gap: 40px;
   padding-top: 100px;
 }
 
