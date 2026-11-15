@@ -1,21 +1,25 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
-import type { Guide } from '../../types/guide';
+import { useDispatch } from 'react-redux';
+import { addGuide } from '../../store/guidesSlice';
 
-interface GuideFormProps {
-  onAddGuide: (guide: Guide) => void;
-}
 
-function GuideForm({ onAddGuide }: GuideFormProps) {
+
+
+
+
+function GuideForm() {
+  const dispatch = useDispatch();
   const [numeroGuia, setNumeroGuia] = useState('');
   const [destinatario, setDestinatario] = useState('');
   const [origen, setOrigen] = useState('');
-  const [destino, setDestino] = useState('');
+  const [destino, setDestino] = 
+  useState('');
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
 
-    onAddGuide({
+    dispatch(addGuide({
       numeroGuia,
       destinatario,
       origen,
@@ -28,7 +32,7 @@ function GuideForm({ onAddGuide }: GuideFormProps) {
           status: 'Pendiente',
         },
       ],
-    });
+    }));
 
     setNumeroGuia('');
     setDestinatario('');

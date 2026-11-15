@@ -1,8 +1,6 @@
 import type { Guide, GuideStatus } from '../../types/guide';
+import { useSelector } from 'react-redux'
 
-interface StatusPanelProps {
-  guides: Guide[];
-}
 
 function filterGuidesByStatus(
   guides: Guide[],
@@ -13,7 +11,11 @@ function filterGuidesByStatus(
   ).length;
 }
 
-function StatusPanel({ guides }: StatusPanelProps) {
+
+
+
+function StatusPanel() {
+  const guides = useSelector((state: { guides: Guide[] }) => state.guides)
   return (
     <section id="estado">
       <h2>Estado de Guías</h2>

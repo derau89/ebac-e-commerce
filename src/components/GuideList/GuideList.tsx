@@ -1,26 +1,20 @@
 import type { Guide } from '../../types/guide';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteGuide, updateGuideStatus } from '../../store/guidesSlice';
 
-interface GuideListProps {
-  guides: Guide[];
-  onUpdateStatus: (
-    numeroGuia: string,
-    nuevoEstado: Guide['estado']
-  ) => void;
-  onDeleteGuide: (numeroGuia: string) => void;
-}
 
-function GuideList({
-  guides,
-  onUpdateStatus,
-  onDeleteGuide,
-}: GuideListProps) {
+
+
+function GuideList() {
+  const dispatch = useDispatch();
+  const guidesFromStore = useSelector((state: { guides: Guide[] }) => state.guides);
   return (
     <section id="guias">
       <h2>Guías</h2>
 
-      <p>Total de guías: {guides.length}</p>
+      <p>Total de guías: {guidesFromStore.length}</p>
 
-      {guides.map((guide) => (
+      {guidesFromStore.map((guide) => (
         <div key={guide.numeroGuia}>
           <p>Número de guía: {guide.numeroGuia}</p>
           <p>Destinatario: {guide.destinatario}</p>
@@ -31,12 +25,14 @@ function GuideList({
 
           <select
             value={guide.estado}
-            onChange={(e) =>
-              onUpdateStatus(
-                guide.numeroGuia,
-                e.target.value as Guide['estado']
-              )
-            }
+           onChange={(e) =>
+              dispatch(
+              updateGuideStatus({
+                numeroGuia: guide.numeroGuia,
+        nuevoEstado: e.target.value as Guide['estado'],
+    }),
+  )
+}
           >
             <option value="Pendiente">Pendiente</option>
             <option value="En tránsito">En tránsito</option>
@@ -54,7 +50,7 @@ function GuideList({
           </ul>
 
           <button
-            onClick={() => onDeleteGuide(guide.numeroGuia)}
+            onClick={() => dispatch(deleteGuide(guide.numeroGuia))}
           >
             Eliminar
           </button>
